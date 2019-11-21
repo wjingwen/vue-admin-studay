@@ -1,0 +1,53 @@
+/*自定义蓝色主题-皮肤*/
+
+/*
+ * 1、顶部navbar颜色
+ */
+.science-gray .top-navbar {
+  background-image: -webkit-gradient(linear, left top, right top, from(#1278f6), to(#00b4aa));
+  background-image: -webkit-linear-gradient(45deg, #1278f6, #00b4aa 50%, #1278f6);
+  background-image: -moz-linear-gradient(45deg, #1278f6, #00b4aa 50%, #1278f6);
+  background-image: linear-gradient(45deg,#1278f6,#00b4aa 50%, #1278f6);
+}
+
+/*
+ * 2、侧边栏
+ */
+.science-gray .left-sidebar {
+  background-color: #fff;
+}
+.science-gray .left-sidebar .el-menu {
+  background-color: #fff;
+}
+.science-gray .left-sidebar .el-menu-item i {
+  color: #666;
+}
+.science-gray .left-sidebar .el-menu-item:hover,
+.science-gray .left-sidebar .el-menu-item:focus,
+.science-gray .left-sidebar .el-submenu__title:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.science-gray .left-sidebar .el-submenu__title {
+  color: #666;
+}
+.science-gray .left-sidebar .el-submenu__title i {
+  color: #666;
+}
+.science-gray .left-sidebar .el-menu-item {
+  color: #666;
+}
+.science-gray .left-sidebar .el-menu-item.is-active {
+  color: #409EFF;
+  background: #fff;
+}
+.science-gray .left-sidebar .el-menu-item.is-active i{
+  color: #409EFF;
+  background: #fff;
+}
+
+/**
+ * 3、tabs-view
+ */
+.science-gray .tabs-view-container .tags-view-item.active .el-tag {
+  background-color: #40b8ff;
+}

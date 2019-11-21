@@ -1,0 +1,87 @@
+body {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font-family: Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial, sans-serif;
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+/* 机器数字 */
+.digital-number {
+  font-family: digital;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+a,
+a:focus,
+a:hover {
+  cursor: pointer;
+  color: inherit;
+  text-decoration: none;
+}
+
+p {
+  margin: 0;
+}
+
+.top-navbar {
+  background-image: -webkit-gradient(linear, left top, right top, from(#3a3c42), to(#9598a1));
+  background-image: -webkit-linear-gradient(45deg, #30333b, #232c4b 50%, #30333b);
+  background-image: -moz-linear-gradient(45deg, #30333b, #232c4b 50%, #30333b);
+  background-image: linear-gradient(45deg,#30333b,#232c4b 50%, #30333b);
+}
+
+/*
+ * 2、侧边栏
+ */
+.left-sidebar {
+  background-color: #30333b;
+}
+.left-sidebar .el-menu {
+  background-color: #30333b;
+}
+.left-sidebar .el-menu-item i {
+  color: #fff;
+}
+.left-sidebar .el-menu-item:hover,
+.left-sidebar .el-menu-item:focus,
+.left-sidebar .el-submenu__title:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.left-sidebar .el-submenu__title {
+  color: #fff;
+}
+.left-sidebar .el-submenu__title i {
+  color: #fff;
+}
+.left-sidebar .el-menu-item {
+  color: #fff;
+}
+.left-sidebar .el-menu-item.is-active {
+  color: #fff;
+  background: #009688;
+}
+.left-sidebar .el-menu-item.is-active i{
+  color: #fff;
+  background: #009688;
+}
+/**
+ * 3、tabs-view
+ */
+.tabs-view-container .tags-view-item.active .el-tag {
+  background-color: #00b4aa;
+}
