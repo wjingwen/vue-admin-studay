@@ -3,7 +3,7 @@ import QS from 'qs'
 import router from '@/router'
 import { Message } from 'element-ui'
 
-const apiurl = 'http://47.93.49.254:7040'
+const apiurl = 'http://127.0.0.1'
 axios.defaults.baseURL = apiurl
 // axios.defaults.baseURL = '/api'
 
