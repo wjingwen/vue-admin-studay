@@ -18,7 +18,7 @@
           </router-link>
         </div>
     </div>
-   <span class="rightico"><i class="el-icon-d-arrow-right"></i></span>
+   <span class="rightico" @click="rightmove"><i class="el-icon-d-arrow-right"></i></span>
   </div>
 </template>
 
@@ -27,7 +27,6 @@ import { mapActions, mapGetters } from 'vuex'
 export default {
   data() {
     return {
-      leftsetwidth:'',
       currentindex:0,
     }
   },
@@ -77,10 +76,14 @@ export default {
       })
     },
     leftmove(){
-      let box = document.getElementById('tabmunes')
-      let obj = document.getElementById('childmeuns')
-      // let setwidth = -100
-      // obj.style.transform='translateX(' + Math.ceil(setwidth) + 'px)'
+      let items = document.querySelectorAll('.tags-view-item')
+      let item = 0
+      items[item].scrollIntoView({ behavior: "smooth",  block: "end",  inline: "end", })
+    },
+    rightmove(){
+      let items = document.querySelectorAll('.tags-view-item')
+      let item = this.currentindex
+      items[items.length-1].scrollIntoView({ behavior: "smooth",  block: "end",  inline: "end", })
     },
     //移动tab
     clickmovetab(){
@@ -89,9 +92,9 @@ export default {
       let items = document.querySelectorAll('.tags-view-item')
       if(obj.offsetWidth>box.offsetWidth){
         //获取当前选中值的宽度
-        items.forEach(function(e){
+        items.forEach(function(e,index){
           if(e.className != 'tags-view-item'){
-             e.scrollIntoView({ behavior: "smooth",  block: "center",  inline: "nearest", })
+             e.scrollIntoView({ behavior: "smooth",  block: "end",  inline: "end", })
           }
         })
       }
