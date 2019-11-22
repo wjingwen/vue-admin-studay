@@ -16,7 +16,6 @@
     methods:{
       successhandle(response,file,fileList){
         this.urlstrings = this.urlstrings+'#'+response.message[0]
-        console.log(this.urlstrings)
         this.$emit('getImgs', this.urlstrings)
       },
       handleRemove(file,fileList){

@@ -12,12 +12,17 @@
     <div>
       <upload-more-img @getImgs="successimages($event,'images')"></upload-more-img>
     </div>
+    <p class="magin20">图片预览</p>
+    <div>
+      <preview-img :ImageUrl="url" :width="100" :height="100"></preview-img>
+    </div>
   </div>
 </template>
 
 <script>
   import UploadImg from '@/components/uploadimg'
   import UploadMoreImg from '@/components/UploadImgMore'
+  import PreviewImg from '@/components/previewimg'
   export default{
     data(){
       return{
@@ -25,13 +30,15 @@
         text:'点击显示',
         ruleForm:{
           userhandCardimg:'',
-          images:''
-        }
+          images:'',
+        },
+        url:"../../../static/image/avatar/0.jpg"
       }
     },
     components:{
       UploadImg,
-      UploadMoreImg
+      UploadMoreImg,
+      PreviewImg
     },
     methods:{
       isshowfun(){
