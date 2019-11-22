@@ -131,14 +131,14 @@ export const asyncRouterMap = [
         name:'directive',
         hidden: false,
         component: () => import('@/view/technology/directive'),
-        meta: {icon: '',title: 'VUE指令'}
+        meta: {icon: '',title: '指令/组件'}
       },
       {
         path: 'funtion',
         name:'funtion',
         hidden: false,
         component: () => import('@/view/technology/funtion'),
-        meta: {icon: '',title: 'VUE相关函数'}
+        meta: {icon: '',title: '相关函数'}
       }
     ]
   },

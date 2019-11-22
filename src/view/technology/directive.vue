@@ -9,23 +9,29 @@
     <p class="magin20">组件单图片上传并可以删除</p>
     <div><upload-img @getFormImg="successfile($event,'userhandCardimg')" ></upload-img></div>
     <p class="magin20">多图片上传</p>
+    <div>
+      <upload-more-img @getImgs="successimages($event,'images')"></upload-more-img>
+    </div>
   </div>
 </template>
 
 <script>
   import UploadImg from '@/components/uploadimg'
+  import UploadMoreImg from '@/components/UploadImgMore'
   export default{
     data(){
       return{
         isshow:false,
         text:'点击显示',
         ruleForm:{
-          userhandCardimg:''
+          userhandCardimg:'',
+          images:''
         }
       }
     },
     components:{
-      UploadImg
+      UploadImg,
+      UploadMoreImg
     },
     methods:{
       isshowfun(){
@@ -41,6 +47,11 @@
       successfile: function(data, name) {
         this.ruleForm[name] = data
       },
+      //上传多张图片
+      successimages:function(data,name){
+        data = data.substr(1)
+        this.ruleForm[name] = data
+      }
     }
   }
 </script>
