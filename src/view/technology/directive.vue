@@ -1,22 +1,34 @@
 <template>
-  <div>
-    <div class="title">全局自定义指令</div>
-    <p>自动获取当前输入框焦点</p>
-    <input v-focus="true"  />
-    <p class="magin20">判断当前按钮是否显示</p>
-    <input :value="text" type="button" @click="isshowfun"/>
-    <div v-isbutton="isshow">显示内容</div>
-    <p class="magin20">组件单图片上传并可以删除</p>
-    <div><upload-img @getFormImg="successfile($event,'userhandCardimg')" ></upload-img></div>
-    <p class="magin20">多图片上传</p>
-    <div>
-      <upload-more-img @getImgs="successimages($event,'images')"></upload-more-img>
-    </div>
-    <p class="magin20">图片预览</p>
-    <div>
-      <preview-img :ImageUrl="url" :width="100" :height="100"></preview-img>
-    </div>
-  </div>
+  <el-row>
+    <el-col :span="24">
+      <div class="textdiv">
+        <div><el-tag type="success">自动获取当前输入框焦点：<input v-focus="true"  /></el-tag></div>
+        <div>
+          <div><el-tag>判断当前按钮是否显示：</el-tag><el-button @click="isshowfun" type="primary" size="small">点击</el-button></div>
+          <div><el-tag type="info" v-isbutton="isshow">显示内容</el-tag></div>
+        </div>
+      </div>
+      <div class="imgdiv">
+        <div>
+          <el-tag type="danger">组件单图片上传并可以删除</el-tag>
+          <div><upload-img @getFormImg="successfile($event,'userhandCardimg')" ></upload-img></div>
+        </div>
+        <div>
+          <el-tag type="warning">组件多图片上传</el-tag>
+          <div>
+            <upload-more-img @getImgs="successimages($event,'images')"></upload-more-img>
+          </div>
+        </div>
+        <div>
+          <el-tag type="info">图片预览</el-tag>
+          <div>
+            <preview-img :ImageUrl="url" :width="100" :height="100"></preview-img>
+          </div>
+        </div>
+      </div>
+    </el-col>
+  </el-row>
+
 </template>
 
 <script>
@@ -64,9 +76,12 @@
 </script>
 
 <style scoped lang="stylus">
-  .title
-    font-size 16px
-    margin-bottom 20px
-  .magin20
-    margin-top 20px
+  .textdiv,.imgdiv
+    display flex
+    flex-direction row
+    justify-content space-around
+    flex-wrap wrap
+    margin-top 50px
+  .imgdiv .el-tag
+    margin-bottom 10px
 </style>
