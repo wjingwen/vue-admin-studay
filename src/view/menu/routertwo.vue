@@ -1,5 +1,6 @@
 <template>
-  <div>二级路由</div>
+  <div>
+  </div>
 </template>
 
 <script>
@@ -13,4 +14,9 @@
 </script>
 
 <style scoped>
+  div{
+    width: 100%;
+    height: 600px;
+    /* background: border-box red; */
+  }
 </style>
