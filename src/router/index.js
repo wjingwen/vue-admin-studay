@@ -14,13 +14,27 @@ export const constantRouterMap = [
     path: '/',
     hidden: true,
     component: Layout,
-    redirect: '/admin',
     children: [
       {
         path: 'admin',
         name: 'adminhome',
         component: () => import('@/view/admin/index'),
         meta: {title: '首页'}
+      }
+    ]
+  },
+  // 配置404页面
+  {
+    path: '*',
+    hidden: true,
+    component: Layout,
+    redirect: "/404",
+    children: [
+      {
+        path: '/404',
+        name: '404',
+        component: () => import('@/view/admin/404'),
+        meta: {title: '网页走丢了'}
       }
     ]
   },
@@ -139,7 +153,21 @@ export const asyncRouterMap = [
         hidden: false,
         component: () => import('@/view/technology/funtion'),
         meta: {icon: '',title: '相关函数'}
-      }
+      },
+      {
+        path: 'richtext',
+        name:'richtext',
+        hidden: false,
+        component: () => import('@/view/technology/richtext'),
+        meta: {icon: '',title: '富文本编辑器'}
+      },
+      {
+        path: 'address',
+        name:'address',
+        hidden: false,
+        component: () => import('@/view/technology/address'),
+        meta: {icon: '',title: '高德地图'}
+      },
     ]
   },
 
