@@ -96,3 +96,16 @@ axios.interceptors.response.use(function (response) {
     Message.error('请求超时，请刷新页面重试')
   }
 })
+
+// 拦截设置
+// axios.interceptors.response.use(response => {
+//   return response
+// }, error => {
+//   if(error.response){
+//     const userinfo = JSON.parse(sessionStorage.getItem('UserInfo'))
+//     router.push('/login')
+//     return error.response
+//   }else{
+//     Message.error('系统错误')
+//   }
+// })
